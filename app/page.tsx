@@ -1,9 +1,5 @@
 import React from "react";
 
 export default function page() {
-  return (
-    <div>
-      <h1 className="text-2xl underline">Bookified</h1>
-    </div>
-  );
+  return <div></div>;
 }

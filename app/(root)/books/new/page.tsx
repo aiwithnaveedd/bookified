@@ -1,20 +1,18 @@
-import React from 'react'
-import HeroSection from "@/components/HeroSection";
-import {sampleBooks} from "@/lib/constants";
-import BookCard from "@/components/BookCard";
+import UploadForm from "@/components/UploadForm";
 
 const Page = () => {
-    return (
-        <main className="wrapper container">
-            <HeroSection />
+  return (
+    <main className="new-book">
+      <section className="flex flex-col gap-5 text-center">
+        <h1 className="page-title-xl">Add a New Book</h1>
+        <p className="subtitle">
+          Upload a PDF to generate your interactive reading experience
+        </p>
+      </section>
 
-            <div className="library-books-grid">
-                {sampleBooks.map((book) => (
-                    <BookCard key={book._id} title={book.title} author={book.author} coverURL={book.coverURL} slug={book.slug} />
-                ))}
-            </div>
-        </main>
-    )
-}
+      <UploadForm />
+    </main>
+  );
+};
 
-export default Page
+export default Page;
